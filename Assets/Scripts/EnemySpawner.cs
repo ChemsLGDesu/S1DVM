@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -6,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public float range = 10f;
     public float spawnInterval = 2f;
     public bool EnableSpawner;
+    public int MaxEnemy = 10;
 
     public float counter;
 
@@ -21,10 +23,7 @@ public class EnemySpawner : MonoBehaviour
             if (counter > spawnInterval)
             {
 
-
-                    SpawnEnemy();
-
-
+                SpawnEnemy();
                 counter = 0f;
 
             }
