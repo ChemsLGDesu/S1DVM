@@ -419,6 +419,7 @@ MonoBehaviour:
   range: 10
   spawnInterval: 2
   EnableSpawner: 0
+  MaxEnemy: 20
   counter: 0
 --- !u!135 &698616418
 SphereCollider:
