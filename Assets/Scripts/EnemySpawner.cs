@@ -20,16 +20,9 @@ public class EnemySpawner : MonoBehaviour
             counter += Time.deltaTime;
             if (counter > spawnInterval)
             {
-                GameObject obj = Instantiate(EnemyPrefab,transform);
-               
-                
-                Vector3 origin = transform.position;
 
-                Vector3 dir = new Vector3(Random.Range(-1f,1f) ,0, Random.Range(-1f, 1f)).normalized;
 
-                Vector3 FinalPosition = origin + dir * Random.Range(0, range);
-
-                obj.transform.position = FinalPosition;
+                    SpawnEnemy();
 
 
                 counter = 0f;
@@ -58,5 +51,19 @@ public class EnemySpawner : MonoBehaviour
     {
         Gizmos.color = Color.aliceBlue;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    public void SpawnEnemy()
+    {
+        GameObject obj = Instantiate(EnemyPrefab, transform);
+
+
+        Vector3 origin = transform.position;
+
+        Vector3 dir = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+
+        Vector3 FinalPosition = origin + dir * Random.Range(0, range);
+
+        obj.transform.position = FinalPosition;
     }
 }
