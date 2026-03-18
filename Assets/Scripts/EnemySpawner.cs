@@ -7,7 +7,6 @@ public class EnemySpawner : MonoBehaviour
     public float range = 10f;
     public float spawnInterval = 2f;
     public bool EnableSpawner;
-    public int MaxEnemy = 10;
 
     public float counter;
 
